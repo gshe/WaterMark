@@ -1,0 +1,26 @@
+//
+//  WaterMark-PrefixHeader.pch
+//  WaterMark
+//
+//  Created by George She on 16/5/14.
+//  Copyright © 2016年 Freedom. All rights reserved.
+//
+
+#ifndef WaterMark_PrefixHeader_pch
+#define WaterMark_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included
+// in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of
+// your targets to reference this file.
+#import "masonry.h"
+#import "extobjc.h"
+
+#undef PTWeak
+#define PTWeak(...) @weakify(__VA_ARGS__)
+#define PTWeakSelf PTWeak(self);
+
+#undef PTStrong
+#define PTStrong(...) @strongify(__VA_ARGS__)
+#define PTStrongSelf PTStrong(self);
+#endif /* WaterMark_PrefixHeader_pch */

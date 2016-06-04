@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="EditWaterMarkViewController">
+            <connections>
+                <outlet property="bottomContainerView" destination="jpV-EB-wGL" id="gZe-6v-lSh"/>
+                <outlet property="imageView" destination="cQn-kT-fHQ" id="3d5-ww-mFA"/>
+                <outlet property="topContainerView" destination="nO7-QY-qi7" id="5MV-5P-hcu"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="jpV-EB-wGL">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="39"/>
+                    <subviews>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Uuj-rd-ghf">
+                            <rect key="frame" x="14" y="2" width="136" height="32"/>
+                            <buttonCell key="cell" type="push" title="Text Watermark" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="olm-mC-I97">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onTextWatermarkClicked:" target="-2" id="ihR-F5-0hH"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1gz-dH-DtQ">
+                            <rect key="frame" x="153" y="2" width="147" height="32"/>
+                            <buttonCell key="cell" type="push" title="Image Watermark" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VVo-5E-urE">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onImageWatermarkClicked:" target="-2" id="BQk-1E-QUk"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c7e-nC-Qkc">
+                            <rect key="frame" x="386" y="2" width="80" height="32"/>
+                            <buttonCell key="cell" type="push" title="Export" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b70-tW-caN">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onExportClicked:" target="-2" id="iXy-eg-Did"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wgH-qw-qZM">
+                            <rect key="frame" x="295" y="2" width="88" height="32"/>
+                            <buttonCell key="cell" type="push" title="Preview" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CuR-xX-w8h">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onPreviewClicked:" target="-2" id="od4-11-Dap"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="c7e-nC-Qkc" firstAttribute="leading" secondItem="wgH-qw-qZM" secondAttribute="trailing" constant="15" id="Bnw-vp-3cq"/>
+                        <constraint firstAttribute="height" constant="39" id="JIF-ef-BAD"/>
+                        <constraint firstAttribute="trailing" secondItem="c7e-nC-Qkc" secondAttribute="trailing" constant="20" id="K6y-wy-eji"/>
+                        <constraint firstItem="1gz-dH-DtQ" firstAttribute="leading" secondItem="Uuj-rd-ghf" secondAttribute="trailing" constant="15" id="MYN-aT-78J"/>
+                        <constraint firstItem="c7e-nC-Qkc" firstAttribute="centerY" secondItem="jpV-EB-wGL" secondAttribute="centerY" id="TNA-uH-4Rr"/>
+                        <constraint firstItem="1gz-dH-DtQ" firstAttribute="centerY" secondItem="jpV-EB-wGL" secondAttribute="centerY" id="Yg6-fg-GPO"/>
+                        <constraint firstItem="Uuj-rd-ghf" firstAttribute="leading" secondItem="jpV-EB-wGL" secondAttribute="leading" constant="20" id="dZr-ri-2O9"/>
+                        <constraint firstItem="wgH-qw-qZM" firstAttribute="centerY" secondItem="jpV-EB-wGL" secondAttribute="centerY" id="pRL-MH-A5h"/>
+                        <constraint firstItem="Uuj-rd-ghf" firstAttribute="centerY" secondItem="jpV-EB-wGL" secondAttribute="centerY" id="zYv-bh-2tf"/>
+                    </constraints>
+                </customView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cQn-kT-fHQ">
+                    <rect key="frame" x="-3" y="36" width="486" height="200"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="photo" id="S2g-U9-G9u"/>
+                </imageView>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="nO7-QY-qi7">
+                    <rect key="frame" x="0.0" y="233" width="480" height="39"/>
+                    <subviews>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YPo-RQ-YCh">
+                            <rect key="frame" x="14" y="2" width="81" height="32"/>
+                            <buttonCell key="cell" type="push" title="Back" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZBC-SJ-RXP">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="onBackClicked:" target="-2" id="4Uf-8j-XfU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="41G-fM-1C1"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="nO7-QY-qi7" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="O2t-ep-XfX"/>
+                <constraint firstItem="nO7-QY-qi7" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="QA1-Cf-5Bt"/>
+                <constraint firstItem="cQn-kT-fHQ" firstAttribute="top" secondItem="nO7-QY-qi7" secondAttribute="bottom" id="WSf-9H-ZVi"/>
+                <constraint firstItem="jpV-EB-wGL" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Yrf-QD-tZX"/>
+                <constraint firstItem="jpV-EB-wGL" firstAttribute="top" secondItem="cQn-kT-fHQ" secondAttribute="bottom" id="asc-zx-lnK"/>
+                <constraint firstAttribute="bottom" secondItem="jpV-EB-wGL" secondAttribute="bottom" id="eJn-YL-RHQ"/>
+                <constraint firstAttribute="trailing" secondItem="nO7-QY-qi7" secondAttribute="trailing" id="n4o-5L-kPE"/>
+                <constraint firstItem="cQn-kT-fHQ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="tf5-h5-tSd"/>
+                <constraint firstAttribute="trailing" secondItem="cQn-kT-fHQ" secondAttribute="trailing" id="ynF-mr-0rp"/>
+                <constraint firstAttribute="trailing" secondItem="jpV-EB-wGL" secondAttribute="trailing" id="zQh-XO-DsN"/>
+            </constraints>
+        </customView>
+    </objects>
+</document>

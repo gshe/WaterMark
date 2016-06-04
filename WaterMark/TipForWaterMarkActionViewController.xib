@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TipForWaterMarkActionViewController">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="264" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ckR-cN-tiP">
+                    <rect key="frame" x="6" y="21" width="64" height="32"/>
+                    <buttonCell key="cell" type="push" title="Edit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tsZ-yQ-mBx">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onEditPressed:" target="-2" id="vXa-Nq-6Be"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9dp-aT-3q9">
+                    <rect key="frame" x="92" y="21" width="80" height="32"/>
+                    <buttonCell key="cell" type="push" title="Delete" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lWv-W0-tc3">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onDeletePressed:" target="-2" id="24P-Uj-rnR"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YQk-GS-CQu">
+                    <rect key="frame" x="168" y="21" width="82" height="32"/>
+                    <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ehw-ia-yUk">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onCancelPressed:" target="-2" id="ssE-eA-6u4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="YQk-GS-CQu" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="1kt-US-g7o"/>
+                <constraint firstItem="ckR-cN-tiP" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="27i-yx-1kp"/>
+                <constraint firstItem="9dp-aT-3q9" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="5bE-E5-S2H"/>
+                <constraint firstItem="ckR-cN-tiP" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="E1X-YE-mVc"/>
+                <constraint firstAttribute="trailing" secondItem="YQk-GS-CQu" secondAttribute="trailing" constant="20" id="tsO-2B-UeX"/>
+                <constraint firstItem="9dp-aT-3q9" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="uD3-hZ-X3d"/>
+            </constraints>
+            <point key="canvasLocation" x="137" y="140.5"/>
+        </customView>
+    </objects>
+</document>
